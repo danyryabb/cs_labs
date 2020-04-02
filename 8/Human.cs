@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace addfuncs
 {
-    abstract class Human : IMyInterfaceFirst
+    abstract class Human
     {
         public String Name { get; set; }
         public String Country { get; set; }
