@@ -72,16 +72,13 @@ namespace ung
             else str = "belarussian";
             return str;
         }
-        public override void GetInfo()
-        {
-            Console.WriteLine($"Name: {Name}\n" +
+        public override string ToString() => $"Name: {Name}\n" +
                 $"Country: {Country}\n" +
                 $"Speciality: {Speciality}\n" +
                 $"Year of entrance: {YearOfEntrance}\n" +
                 $"Entrance points: {EntrancePoints}\n" +
                 $"Olimpiad: {GetOlimpiad()}\n" +
                 $"Last exams average mark: {AverageMark}\n" +
-                $"Next {nxtOly.name} in university will be at {nxtOly.date1}.");
-        }
+                $"Next {nxtOly.name} in university will be at {nxtOly.date1}.";
     }
 }
