@@ -11,10 +11,10 @@ namespace ung
             var objth = SetStudent();
             Console.Clear();
             
-            objf.GetInfo();
-            objs.GetInfo();
-            objth.GetInfo();
-
+            Console.WriteLine(objf);
+            Console.WriteLine(objs);
+            Console.WriteLine(objth);
+            
             Student[] students = new Student[2];
             SetStudList(students);
         }
