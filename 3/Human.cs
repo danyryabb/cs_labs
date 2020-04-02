@@ -39,15 +39,6 @@ namespace ClassCreating
             SchoolName = null;
             counter = 0;
         }
-        public void DisplayId()
-        {
-            Console.WriteLine($"Уникальный {counter} объекта Human");
-        }
-        public void GetInfo()
-        {
-            Console.WriteLine($"Second Name: {SecondName}\tFirst name: {FirstName}\tPlace of birth: {PlaceOfBirth}\t" +
-                $"School name is: {SchoolName}\tYear of birth: {YearOfBirth}");
-        }
         public void GetInfo(int index)
         {
             if (2020 - YearOfBirth < 17) Console.WriteLine($"Person number {++index} is studying at {SchoolName} school");
@@ -55,6 +46,10 @@ namespace ClassCreating
             else Console.WriteLine($"Person number {++index} graduated {SchoolName} school  {2020 - YearOfBirth - 17} year(years) ago");
         }
 
+        public override string ToString() => $"Second Name: {SecondName}\tFirst name: {FirstName}\tPlace of birth: {PlaceOfBirth}\t" +
+                $"School name is: {SchoolName}\tYear of birth: {YearOfBirth}\t"+
+           $"Уникальный {counter} объекта Human";
+      
         public void Filling(int index)
         {
             Console.WriteLine($"Enter {++index} human`s 2nd name: ");
