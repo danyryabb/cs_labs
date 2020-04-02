@@ -2,7 +2,7 @@ using System;
 
 namespace ung
 {
-    class Student : Spec, IMyInterfaceSec, IComparable<Student>
+    class Student : Spec, IMyInterface, IComparable<Student>
     {
 
         public Int32 YearOfEntrance { get; set; }
