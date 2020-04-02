@@ -4,6 +4,7 @@ namespace ung
 {
     class Student : Spec, IMyInterfaceSec, IComparable<Student>
     {
+
         public Int32 YearOfEntrance { get; set; }
         public Int32 EntrancePoints { get; set; }
         public double AverageMark { get; set; }
@@ -29,6 +30,12 @@ namespace ung
         }
         public NextOlimpiad nxtOly;
 
+        public int CompareTo(Student obj)
+        {
+            if (this.EntrancePoints == obj.EntrancePoints) return 0;
+            else if (this.EntrancePoints > obj.EntrancePoints) return 1;
+            else return -1;
+        }
         public Student() : base()
         {
             YearOfEntrance = 2019;
@@ -71,7 +78,7 @@ namespace ung
             else if (Oly == Olimpiads.Russian) str = "russian";
             else str = "belarussian";
             return str;
-        }
+        }        
         public override string ToString() => $"Name: {Name}\n" +
                 $"Country: {Country}\n" +
                 $"Speciality: {Speciality}\n" +
