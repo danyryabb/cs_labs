@@ -78,9 +78,9 @@ namespace ClassCreating
                 YearOfBirth = int.Parse(Console.ReadLine());
             } while (YearOfBirth > 1940);
         }
-        public void delByIndex(ref Human[] data, int delIndex, ref int counter)
+        public void delByIndex(ref Human[] data, int delIndex)
         {
-            counter--;
+            int counter = data.Length - 1;
             delIndex--;
             Human[] obj = new Human[counter];
             for (int i = 0; i < delIndex; i++)
